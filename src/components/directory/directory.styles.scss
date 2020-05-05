@@ -1,6 +1,18 @@
+$desktop: 1040px;
+@mixin desktop {
+	@media (max-width: #{$desktop}) {
+		@content;
+	}
+}
+
 .directory-menu {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+	width: 100%;
+	display: flex;
+
+	flex-wrap: wrap;
+	justify-content: space-between;
+
+	@include desktop {
+		flex-direction: column;
+	}
 }
